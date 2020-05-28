@@ -24,23 +24,24 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.spring.api.documentation"))
                 .paths(regex("/rest.*"))
-                .build();
+                .build()
+                .apiInfo(metaInfo());
     }
 
-//    private ApiInfo metaInfo() {
-//
-//        ApiInfo apiInfo = new ApiInfo(
-//                "Spring Boot Swagger API",
-//                "Spring Boot Swagger API ",
-//                "1.0",
-//                "Terms of Service",
-//                new Contact("TechPrimers", "https://www.youtube.com/TechPrimers",
-//                        "techprimerschannel@gmail.com"),
-//                "Apache License Version 2.0",
-//                "https://www.apache.org/licesen.html"
-//        );
-//
-//        return apiInfo;
-//    }
+    private ApiInfo metaInfo() {
+
+        ApiInfo apiInfo = new ApiInfo(
+                "Spring Boot Swagger API",
+                "Spring Boot Swagger API ",
+                "1.0",
+                "Terms of Service",
+                new Contact("Soumyadip Chowdhury", "https://soumyadip007.github.io/Resume/",
+                        "soumyadip.note@gmail.com"),
+                "Apache License Version 2.0",
+                "https://github.com/soumyadip007/Swagger2-API-Documentation-using-Spring-Boot-and-Microservices"
+        );
+
+        return apiInfo;
+    }
 	
 }
