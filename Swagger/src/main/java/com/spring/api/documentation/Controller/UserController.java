@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @RestController
 @RequestMapping("/rest/user")
+@Api(value = "User Resource REST Endpoint", description = "Shows the user info")
 public class UserController {
 
     @GetMapping
